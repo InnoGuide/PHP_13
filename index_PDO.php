@@ -17,7 +17,7 @@
       //SQL-Statement 
       $sql="select * from Person";
 
-      // send SQL-Statemt(req.)/ empfangen(resive)Data
+      // send SQL-Statemt(req.)/ empfangen(receive)Data
       $result = $conn->query($sql);
       //test auf Daten
       $rows=$result->fetchAll();

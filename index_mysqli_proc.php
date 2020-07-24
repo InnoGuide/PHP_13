@@ -1,10 +1,10 @@
 <?php
 
    //Datenquelle beschreiben
-   $server="127.0.0.1";
-   $user = "root";
-   $psw = null;
-   $dbName = "myDB";
+   $server="127.0.0.1"; //deine IP
+   $user = "root"; //dein Username
+   $psw = null; //dein Password
+   $dbName = "myDB"; //deine Datenbank
    //verbinden mit Datenquelle ($server,$user, $psw,$dbName)
    $conn = mysqli_connect($server,$user, $psw,$dbName);
    //test Verbindung
@@ -13,7 +13,7 @@
    }else{
       //SQL-Statement 
       $sql="select * from User";
-      // send SQL-Statemt(req.)/ empfangen(resive)Data
+      // send SQL-Statemt(req.)/ empfangen(receive)Data
       $result = mysqli_query($conn, $sql );
       //test auf Daten
       if(mysqli_num_rows($result)){
