@@ -1,16 +1,16 @@
 <?php
    
    //Datenquelle beschreiben
-   $server="192.168.0.25";
-   $user = "tutorial";
-   $psw = "password";
-   $dbName = "myDB";
+   $server="127.0.0.1"; //deine IP
+   $user = "root"; //dein Username
+   $psw = null; //dein Password
+   $dbName = "myDB"; //deine Datenbank
 
    //verbinden mit Datenquelle ($server,$user, $psw,$dbName)
    //test Verbindung
    try{
-    $conn = new PDO("sqlsrv:Server=$server; Database=$dbName", $user, $psw);
-    //$conn = new PDO("mysql:host=$server; dbname=$dbName", $user, $psw);
+    //$conn = new PDO("sqlsrv:Server=$server; Database=$dbName", $user, $psw);
+    $conn = new PDO("mysql:host=$server; dbname=$dbName", $user, $psw);
    }catch(PDOException $e){
      echo $e->getMessage();
    }
